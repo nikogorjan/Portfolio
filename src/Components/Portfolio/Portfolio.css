@@ -1,0 +1,33 @@
+.portfolio-main{
+    width: 100%;
+
+   
+
+   
+}
+
+
+.fade-overflow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    /* Set the initial opacity to 0 */
+    opacity: 1;
+    pointer-events: none; /* Prevent interaction with this element */
+    z-index: 2; /* Ensure it's above the content */
+    /* Add any transitions you want */
+    animation: fade-in 1s ease forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+

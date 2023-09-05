@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+}
+
+.hero-overflow-hide {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.hero-main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overflow-text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.0);
+    z-index: 1;
+    display: flex;
+    /* Make sure the text container is above the video */
+
+}
+
+.container-left{
+   width: 50%; 	
+   display: flex;
+   justify-content: center;
+   
+}
+
+.headers-container{
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.container-right{
+    width: 50%; 	
+
+}
+
+.greeting{
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-top: 20%;
+    display: none;
+}
+
+.degree{
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-top: 20%;
+    display: none;
+}
+
+.design{
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-top: 20%;
+    display: none;
+}
+
+.database{
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-top: 20%;
+    display: none;
+}
+
+.greeting.show-text {
+    opacity: 1;
+    display: block;
+  }
+
+  .degree.show-text {
+    opacity: 1;
+    display: block;
+  }
+
+  .design.show-text {
+    opacity: 1;
+    display: block;
+  }
+
+  .database.show-text {
+    opacity: 1;
+    display: block;
+  }
+
+  /* Define the keyframes animation */
+@keyframes slideIn {
+    from {
+        right: -100%; /* Start off-screen on the right */
+    }
+    to {
+        right: 0; /* Slide in to the visible area */
+    }
+}
+
+/* Apply the animation to hero-overflow when the slide-in class is added */
+.hero-overflow.slide-in {
+    animation: slideIn 1s forwards;
+}
+
+/* Styles for hero-overflow */
+
+.pulsing-circle {
+    width: 75px;
+    height: 75px;
+    background-color: black;
+    color: white;
+    font-family: 'NunitoSans-Light';
+    opacity: 0.5;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: pulse 2s infinite;
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    font-size: 12px;
+}
+
+.hero-overflow {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen on the right */
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    background-color: black;
+    z-index: 9;
+    transition: transform 2s ease; /* Add a transition for smoother sliding */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.2);
+    }
+}
+
+@media (max-width: 1000px) {
+    .overflow-text-container {
+        flex-direction: column;
+    }
+
+    .container-left{
+        width: 100%; 	
+     }
+     
+     .container-right{
+         width: 100%; 	
+     
+     }
+
+     
+}

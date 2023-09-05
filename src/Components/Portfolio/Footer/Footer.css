@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+}
+
+.footer-main{
+    padding: 50px;
+    background-color: rgba(255, 241, 165,1);
+
+}
+
+.contact-header{
+    font-family: 'NunitoSans-Bold';
+    color: rgb(9, 8, 13);
+    font-size: clamp(0.625rem, 0.5417rem + 0.4444vw, 1.25rem);
+}

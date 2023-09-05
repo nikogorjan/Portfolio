@@ -1,0 +1,352 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+}
+
+.intro-hidden{
+    display: none;
+}
+
+.introHero-main{
+    width: 100%;
+    display: flex;
+    background-color: rgb(9, 8, 13);
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+
+.intro-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    color: white;
+}
+
+.intro-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    color: white;
+}
+
+.intro-header1{
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+    margin-bottom: 20px;
+}
+
+.intro-header2{
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(0.75rem, 0.5167rem + 1.2444vw, 2.5rem);       color: gray;
+    margin: 0;
+}
+
+.buttons-row{
+    display: flex;
+    margin-top: 30px;
+}
+
+.cv-button{
+    width: 145px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid rgb(255, 241, 165);
+    background-color: transparent;
+    margin: 10px;
+    color: white;
+    font-family: 'NunitoSans-Bold';
+    cursor: pointer;
+    transition: all .2s;
+
+}
+
+
+.cv-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgb(255, 241, 165);
+}
+
+.cv-button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+
+.contact-button{
+    width: 145px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid rgb(255, 241, 165);
+    background-color: rgb(255, 241, 165);
+    margin: 10px;
+    color: rgb(9, 8, 13);
+    font-family: 'NunitoSans-Bold';
+    cursor: pointer;
+}
+
+.left-wrapper{
+    margin-left: 20%;
+    transform: translateY(-20%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10%;
+}
+
+.btn-5 {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+
+    width: 145px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid rgb(255, 241, 165);
+    background-color: transparent;
+    margin: 10px;
+    color: white;
+    font-family: 'NunitoSans-Bold';
+    cursor: pointer;
+  } 
+  
+  .btn-5:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 241, 165,.5), 0 0 20px rgba(255, 241, 165,.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+  }
+
+
+  .btn-4 {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid rgb(255, 241, 165);
+    background-color: rgb(255, 241, 165);
+    margin: 10px;
+    color: rgb(9, 8, 13);
+    font-family: 'NunitoSans-Bold';
+    cursor: pointer;
+  } 
+  
+  .btn-4:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 241, 165,.5), 0 0 20px rgba(255, 241, 165,.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+   
+  }
+
+  .color-yello{
+    background-color: rgb(255, 241, 165);
+    color: rgb(9, 8, 13);
+  }
+
+  .color-yello:hover{
+    color: white;
+    background-color: transparent;
+  }
+
+
+  .planet {
+    /* Set the background image URL */
+    background-image: url('../../../Resources/Images/nobackground2-fotor-20230831153357.png');
+    
+    /* Set the size and positioning of the background image */
+    background-size: cover;
+    background-position: center;
+   
+
+    background-color:  rgb(255, 241, 165);
+    
+    /* Set the width and height of the box element */
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    
+    /* Add other styles as needed */
+    animation: animate 15s ease-in-out infinite;
+
+    
+    transform: translate(-50px, -25px);
+
+    
+}
+
+.shadow-planet {
+    /* Set the background image URL for the shadow planet */
+    
+    /* Set the size and positioning of the background image */
+    background-size: cover;
+    background-position: center;
+
+    /* Set the background color for the shadow planet */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    
+    /* Set the width and height of the shadow planet */
+    width: 60%; /* Adjust as needed */
+    height: 60%; /* Adjust as needed */
+    
+    /* Add the same animation as the main planet */
+    animation: animate 15s ease-in-out infinite;
+    
+    /* Position the shadow planet behind the main planet */
+    
+    
+    /* Add other styles as needed */
+    transform: translate(-50px, 50px);
+    
+
+}
+
+@keyframes animate{
+    0%{
+        border-radius: 66% 34% 61% 39% / 77% 33% 67% 23%    ;
+    }
+    30%{
+        border-radius: 66% 34% 73% 27% / 41% 44% 56% 59%
+        ;
+    }
+    60%{
+        border-radius: 45% 55% 38% 62% / 41% 64% 36% 59%
+        ;
+    }
+    100%{
+        border-radius: 66% 34% 61% 39% / 77% 33% 67% 23%    ;
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .introHero-main{
+        flex-direction: column;
+        min-height: auto;
+
+    }
+
+    .planet {
+        /* Set the background image URL */
+        background-image: url('../../../Resources/Images/nobackground2-fotor-20230831153357.png');
+        
+        /* Set the size and positioning of the background image */
+        background-size: cover;
+        background-position: center;
+       
+    
+        
+        /* Set the width and height of the box element */
+        width: 100%; /* Adjust as needed */
+        height: 100%; /* Adjust as needed */
+        
+        /* Add other styles as needed */
+        animation: animate 15s ease-in-out infinite;
+    
+        
+        transform: translate(-50px, -25px);
+    
+        
+    }
+    
+    .shadow-planet {
+        /* Set the background image URL for the shadow planet */
+        
+        /* Set the size and positioning of the background image */
+        background-size: cover;
+        background-position: center;
+    
+        /* Set the background color for the shadow planet */
+        
+        /* Set the width and height of the shadow planet */
+        width: 60%; /* Adjust as needed */
+        height: 60%; /* Adjust as needed */
+        
+        /* Add the same animation as the main planet */
+        animation: animate 15s ease-in-out infinite;
+        
+        /* Position the shadow planet behind the main planet */
+        
+        
+        /* Add other styles as needed */
+        transform: translate(+50px, +25px);
+        
+    
+    }
+
+
+
+    .intro-left{
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 15%;
+        margin-bottom: 5px;
+    }
+    
+    .intro-right{
+        width: 100%;
+        display: none;
+       
+    }
+
+    .left-wrapper{
+        margin-left: 0%;
+        transform: translateY(-0%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .right-wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0%;
+    }
+
+    .intro-hidden{
+        display: block;
+        width: 100%;
+        display: flex;
+        margin-top: 30%;
+        
+    }
+
+    .btn-5 {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+    
+}

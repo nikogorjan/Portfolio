@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'NunitoSans-Regular';
+  src: url('../../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'NunitoSans-Bold';
+  src: url('../../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'NunitoSans-Light';
+  src: url('../../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+}
+
+.PortfolioHero-main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: rgb(9, 8, 13);
+    overflow: hidden;
+}
+
+.portfolio-left {
+  width: 50%;
+    background-color: rgb(9, 8, 13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden; /* Ensure that child elements don't overflow */
+  }
+  
+  .animated-div {
+    width: 50%;
+    padding-top: 33.75%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+    margin-bottom: 50px; /* Increase this margin to separate divs */
+    position: absolute;
+    top: -100%; /* Start divs completely hidden above portfolio-left */
+    animation: moveDown 12s linear infinite;
+    border-radius: 0px;
+  }
+  
+  .animated-div:nth-child(2) {
+    animation-delay: 4s; /* Delay the animation of the second div */
+  }
+  
+  .animated-div:nth-child(3) {
+    animation-delay: 8s; /* Delay the animation of the third div */
+  }
+  
+  @keyframes moveDown {
+    0% {
+      top: -50%; /* Starting position, above portfolio-left */
+    }
+    100% {
+      top: 100%; /* Ending position, below portfolio-left */
+    }
+  }
+
+.portfolio-right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.my-work{
+  font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+    color: white;
+}
+
+.right-portfolio-wrapper{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(-20%,-20%);
+}
+
+.my-paragraph{
+  font-family: 'NunitoSans-Light';
+  color: white;
+  text-align: center;
+  font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+
+  margin-bottom: 35px;
+}
+
+
+
+@media (max-width: 1000px) {
+    .PortfolioHero-main{
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    
+    .portfolio-left{
+      justify-content: center; /* Align content to the top */
+      align-items: center;
+      width: 100%;
+      height: 200px;
+      margin-top: 10%;
+    }
+
+    .portfolio-right{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    
+
+    .animated-div {
+        animation: moveRight 12s linear infinite; /* Use a different animation for smaller screens */
+        top: 0; /* Start divs at the top */
+        transform: translateY(-0%); 
+        padding: 0;
+        
+      }
+    
+      .animated-div:nth-child(2) {
+        animation-delay: 4s;
+        left: -100%;
+      }
+    
+      .animated-div:nth-child(3) {
+        animation-delay: 8s;
+        left: -100%;
+      }
+    
+      @keyframes moveRight {
+        0% {
+          left: -50%; /* Starting position, to the left of portfolio-left */
+        }
+        100% {
+          left: 150%; /* Ending position, to the right of portfolio-left */
+        }
+      }
+
+      .right-portfolio-wrapper{
+        width: 90%;
+        transform: translate(0px,0px);
+
+      }
+
+      
+}
+
+@media (max-width: 450px) {
+  .portfolio-left{
+    height: 130px;
+    
+    margin-top: 30%;
+  }
+}
