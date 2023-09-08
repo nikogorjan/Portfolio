@@ -1,49 +1,55 @@
 @font-face {
     font-family: 'NunitoSans-Regular';
-    src: url('../../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
 }
 
 @font-face {
     font-family: 'NunitoSans-Bold';
-    src: url('../../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
 }
 
 @font-face {
     font-family: 'NunitoSans-Light';
-    src: url('../../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
 }
 
-.skills-main{
+
+.NewSkills-main {
     width: 100%;
-    background-color: rgb(9, 8, 13);
-    padding-bottom: 7%;
+    display: flex;
 }
 
-.skills-layout{
-    width: 90%;
-    display: flex;
-    margin: 0 auto;
-}
-
-.skills-row{
-    display: flex;
+.new_skill {
     width: 50%;
-    align-items: center;
-    justify-content: center;
-}
-
-.skill{
-    width: 80%;
-    margin: 20px;
+    min-height: 400px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 400px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
+    border-bottom: 1px solid #1F1F1F;
+
+}
+
+.new_skill-row {
+    display: flex;
+    width: 50%;
+    position: relative;
+}
+
+.new_skill-row::before {
+    width: 1px;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+}
+
+.new_skill-row:first-child {
+    border-right: 1px solid #1F1F1F;
 }
 
 .skill-image {
@@ -79,6 +85,7 @@
     font-family: 'NunitoSans-Bold';
     font-size: clamp(0.75rem, 0.7167rem + 0.1778vw, 1rem);
     text-align: center;
+    width: 90%;
 }
 
 .logos-flex{
@@ -106,52 +113,63 @@
 }
 
 
-@media (max-width: 1553px) {
-    .skills-layout{
+
+
+@media (max-width: 1430px) {
+    .NewSkills-main {
         flex-direction: column;
     }
-    .skills-row{
+
+    .new_skill-row{
         width: 100%;
-        margin-bottom: 20px;
     }
 
-    .skill{
-        min-height: 400px;
+    .new_skill-row:first-child {
+        border-right: 0px solid #1F1F1F;
     }
 
-    .skills-main{
-        width: 100%;
-        padding-top: 10%;
+    .new_skill:first-child {
+        border-right: 1px solid #1F1F1F;
     }
 
+   
+    
+    
+    .new_skill-row::before {
+        width: 0px;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
 }
 
-@media (max-width: 800px) {
-    .skills-row{
+@media (max-width: 1000px) {
+    .new_skill-row{
         flex-direction: column;
+        
     }
 
-    .skills-row{
+    .new_skill {
         width: 100%;
-        margin-bottom: 0px;
-    }
-
-    .skill{
-        margin-bottom: 50px;
-    }
-
-    .skill{
         min-height: 320px;
     }
 
-    .skills-main{
-        width: 100%;
-        padding-top: 10%;
+    .new_skill-row::before {
+        width: 0px;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
     }
 
-    .skill-image {
-        width: 40px;
-        height: 40px;
+    .new_skill:first-child {
+        border-right: 0px solid #1F1F1F;
     }
-    
 }

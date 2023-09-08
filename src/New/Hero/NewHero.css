@@ -1,0 +1,352 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+}
+
+.NewHero-main {
+    width: 100%;
+    display: flex;
+    margin-top: 75px;
+    background-color: rgb(9, 8, 13);
+    ;
+}
+
+.my-info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-top: 1px solid #1F1F1F;
+    border-right: 1px solid #1F1F1F;
+    border-bottom: 1px solid #1F1F1F;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.my-image-container {
+    width: 50%;
+    position: relative;
+    border-top: 1px solid #1F1F1F;
+    border-bottom: 1px solid #1F1F1F;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+
+
+.my-name-header {
+    color: white;
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(2.5rem, 2rem + 2.6667vw, 6.25rem);
+    margin-bottom: 20px;
+    z-index: 1;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.my-name-header2 {
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.3rem + 1.0667vw, 3rem);
+    color: gray;
+    margin: 0;
+    z-index: 1;
+    margin: 0;
+    margin-bottom: 40px;
+
+}
+
+.my-info-container::before {
+    width: 1px;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+
+}
+
+.my-info-container::after {
+    height: 1px;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+
+}
+
+
+.my-image-container::before {
+    width: 1px;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+}
+
+.my-image-container::after {
+    height: 1px;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+}
+
+
+.NewHero-intro-hidden {
+    display: none;
+    position: relative;
+
+
+}
+
+.NewHero-intro-hidden::before {
+    width: 1px;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+}
+
+.NewHero-intro-hidden::after {
+    height: 1px;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+}
+
+.planet {
+    /* Set the background image URL */
+    background-image: url('../../Resources/Images/nobackground2-fotor-20230831153357.png');
+    
+    /* Set the size and positioning of the background image */
+    background-size: cover;
+    background-position: center;
+   
+
+    background-color:  rgb(255, 241, 165);
+    
+    /* Set the width and height of the box element */
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    
+    /* Add other styles as needed */
+    animation: animate 15s ease-in-out infinite;
+
+    transform: translate(-50px, -25px);
+
+    z-index: 1;
+
+    
+}
+
+.shadow-planet {
+    /* Set the background image URL for the shadow planet */
+    
+    /* Set the size and positioning of the background image */
+    background-size: cover;
+    background-position: center;
+
+    /* Set the background color for the shadow planet */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    
+    /* Set the width and height of the shadow planet */
+    width: 60%; /* Adjust as needed */
+    height: 60%; /* Adjust as needed */
+    
+    /* Add the same animation as the main planet */
+    animation: animate 15s ease-in-out infinite;
+    
+    /* Position the shadow planet behind the main planet */
+    
+    
+    /* Add other styles as needed */
+    transform: translate(-50px, 50px);
+    
+    z-index: 1;
+
+}
+
+@keyframes animate{
+    0%{
+        border-radius: 66% 34% 61% 39% / 77% 33% 67% 23%    ;
+    }
+    30%{
+        border-radius: 66% 34% 73% 27% / 41% 44% 56% 59%
+        ;
+    }
+    60%{
+        border-radius: 45% 55% 38% 62% / 41% 64% 36% 59%
+        ;
+    }
+    100%{
+        border-radius: 66% 34% 61% 39% / 77% 33% 67% 23%    ;
+    }
+}
+
+.right-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0%;
+}
+
+.btn-5 {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+
+    width: 112px;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 50px;
+    border: 1px solid rgb(255, 241, 165);
+    background-color: transparent;
+    margin: 10px;
+    color: white;
+    font-family: 'NunitoSans-Bold';
+    cursor: pointer;
+    z-index: 1;
+
+  } 
+  
+  .btn-5:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 241, 165,.5), 0 0 20px rgba(255, 241, 165,.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+  }
+
+  .color-yello{
+    background-color: rgb(255, 241, 165);
+    color: rgb(9, 8, 13);
+  }
+
+  .color-yello:hover{
+    color: white;
+    background-color: transparent;
+  }
+
+  .yello-margin{
+    margin-left: 60px;
+
+}
+
+@media (max-width: 1000px) {
+    .NewHero-main {
+        flex-direction: column;
+    }
+
+    .my-info-container {
+        width: 100%;
+        border-top: 1px solid #1F1F1F;
+    border-right: 0px solid #1F1F1F;
+    border-bottom: 1px solid #1F1F1F;
+    }
+
+    .my-image-container {
+        width: 100%;
+        display: none;
+    }
+
+    .NewHero-intro-hidden {
+        display: block;
+        width: 100%;
+        display: flex;
+        padding-top: 50px;
+    padding-bottom: 50px;
+        border-top: 1px solid #1F1F1F;
+
+    }
+
+    .right-wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0%;
+    }
+
+    .planet {
+        /* Set the background image URL */
+        background-image: url('../../Resources/Images/nobackground2-fotor-20230831153357.png');
+        
+        /* Set the size and positioning of the background image */
+        background-size: cover;
+        background-position: center;
+       
+    
+        
+        /* Set the width and height of the box element */
+        width: 100%; /* Adjust as needed */
+        height: 100%; /* Adjust as needed */
+        
+        /* Add other styles as needed */
+        animation: animate 15s ease-in-out infinite;
+    
+        
+        transform: translate(-50px, -25px);
+    
+        
+    }
+    
+    .shadow-planet {
+        /* Set the background image URL for the shadow planet */
+        
+        /* Set the size and positioning of the background image */
+        background-size: cover;
+        background-position: center;
+    
+        /* Set the background color for the shadow planet */
+        
+        /* Set the width and height of the shadow planet */
+        width: 60%; /* Adjust as needed */
+        height: 60%; /* Adjust as needed */
+        
+        /* Add the same animation as the main planet */
+        animation: animate 15s ease-in-out infinite;
+        
+        /* Position the shadow planet behind the main planet */
+        
+        
+        /* Add other styles as needed */
+        transform: translate(+50px, +25px);
+        
+    
+    }
+}

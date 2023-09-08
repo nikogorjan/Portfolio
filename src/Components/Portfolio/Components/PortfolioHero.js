@@ -39,7 +39,7 @@ function PortfolioHero() {
         <div className='right-portfolio-wrapper'>
           <h1 className='my-work'>My work</h1>
           <p className='my-paragraph'>I'm deeply passionate about the art of crafting animations that breathe life into websites, transforming them into dynamic and captivating digital experiences.</p>
-          <button className='btn-5 margin-btn'>Read more</button>
+          <button className='btn-5 margin-btn my-work-margin'>Read more</button>
         </div>
       </div>
     </div>

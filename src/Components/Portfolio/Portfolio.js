@@ -1,22 +1,27 @@
 import React from 'react';
 import './Portfolio.css'
-import PortfolioHero from './Components/PortfolioHero';
-import Intro from './Components/Intro';
-import Accounting from './Accounting/Accounting';
-import Skills from './Skills/Skills';
-import ContactForm from './Contact/Contact';
+
 import Footer from './Footer/Footer';
+import Navbar from './Navbar/Navbar';
+import NewHero from '../../New/Hero/NewHero';
+import NewSkills from '../../New/Skills/NewSkills';
+import NewWork from '../../New/NewWork/NewWork';
 
 function Portfolio() {
     
 
     return (
         <div className='portfolio-main'>
-            <Intro/>
-            <PortfolioHero/>
-            <Accounting/>
+           <Navbar/>
+            <NewHero/>
+            <NewSkills/>
+            <NewWork/>
+             {/*<Intro/>
             <Skills/>
-            <ContactForm/>
+            <PortfolioHero/>*/}
+             {/*<Accounting/>*/}
+            
+            
             <Footer/>
             <div className='fade-overflow'></div>
         </div>

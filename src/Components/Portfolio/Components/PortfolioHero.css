@@ -19,6 +19,7 @@
     display: flex;
     background-color: rgb(9, 8, 13);
     overflow: hidden;
+    padding-bottom: 10px;
 }
 
 .portfolio-left {
@@ -70,26 +71,37 @@
 
 .my-work{
   font-family: 'NunitoSans-Bold';
-    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+  font-size: clamp(2rem, 1.4333rem + 3.0222vw, 6.25rem);
+
     color: white;
+    align-self: flex-start;
+    margin: 0px;
 }
 
 .right-portfolio-wrapper{
-  width: 70%;
+  width: 90%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  transform: translate(-20%,-20%);
+  transform: translate(-15%,-0%);
+
+
 }
 
 .my-paragraph{
-  font-family: 'NunitoSans-Light';
-  color: white;
-  text-align: center;
-  font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+  font-family: 'NunitoSans-Bold';
+  color: gray;
+  text-align: justify;
+  font-size: clamp(0.75rem, 0.5833rem + 0.8889vw, 2rem);
 
   margin-bottom: 35px;
+}
+
+.my-work-margin{
+  margin: 0px !important; 
+  align-self: flex-start;
+  margin-top: 1rem !important;
 }
 
 
@@ -149,7 +161,6 @@
       .right-portfolio-wrapper{
         width: 90%;
         transform: translate(0px,0px);
-
       }
 
       

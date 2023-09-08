@@ -33,6 +33,7 @@
     justify-content:center;
     align-items:center;
     color: white;
+    margin-top: 5%;
 }
 
 .intro-right{
@@ -46,13 +47,14 @@
 
 .intro-header1{
     font-family: 'NunitoSans-Bold';
-    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+    font-size: clamp(2.5rem, 2rem + 2.6667vw, 6.25rem);
     margin-bottom: 20px;
 }
 
 .intro-header2{
     font-family: 'NunitoSans-Bold';
-    font-size: clamp(0.75rem, 0.5167rem + 1.2444vw, 2.5rem);       color: gray;
+    font-size: clamp(1.5rem, 1.3rem + 1.0667vw, 3rem);
+    color: gray;
     margin: 0;
 }
 
@@ -112,7 +114,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10%;
 }
 
 .btn-5 {
@@ -131,6 +132,8 @@
     color: white;
     font-family: 'NunitoSans-Bold';
     cursor: pointer;
+    z-index: 1;
+
   } 
   
   .btn-5:hover {
@@ -198,8 +201,9 @@
     /* Add other styles as needed */
     animation: animate 15s ease-in-out infinite;
 
-    
     transform: translate(-50px, -25px);
+
+    z-index: 1;
 
     
 }
@@ -227,6 +231,7 @@
     /* Add other styles as needed */
     transform: translate(-50px, 50px);
     
+    z-index: 1;
 
 }
 
