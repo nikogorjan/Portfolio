@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import demin from '../../../Resources/Images/deminobg.png';
 
-function Navbar() {
+function Navbar({ onButtonClick }) {
     const [scrolling, setScrolling] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -25,17 +26,26 @@ function Navbar() {
         setMenuOpen(!menuOpen);
     };
 
+    const handleButtonClick = (info) => {
+        // Call the function passed from the parent component with the info
+        onButtonClick(info);
+    };
+
+
     
 
     return (
-        <div className={`navbar-main ${scrolling ? 'scrolled' : ''}`}>
+        <div className={`navbar-main ${scrolling ? 'scrolled' : ''} ${menuOpen ? 'menu-opened' : ''}`}>
+            <div className='demi-logo-holder' onClick={() => handleButtonClick('Home')}>  <img className='the-img' src={demin} alt='Demi Logo' />
+</div>
+
 
             <div className='navbar-links'>
-                <p>Home</p>
-                <p>Projects</p>
+                <p onClick={() => handleButtonClick('Home')}>Home</p>
+                <p onClick={() => handleButtonClick('Projects')}>Projects</p>
 
-                <p>About Me</p>
-                <button className='btn-5  yello-margin'>Contact</button>
+                
+                <button className='btn-5  yello-margin' onClick={() => handleButtonClick('Contact')}>Contact</button>
 
             </div>
             <div className='navbar-menu' onClick={toggleMenu}>
@@ -45,12 +55,12 @@ function Navbar() {
             </div>
 
             <div className={`open-menu ${menuOpen ? "openmenu" : ""}`} >
-                <p>Home</p>
+                <p className='navbar-link' onClick={() => handleButtonClick('Home')}>Home</p>
 
-                <p >Projects</p>
+                <p className='navbar-link' onClick={() => handleButtonClick('Projects')}>Projects</p>
 
-                <p>About Me</p>
-                <button className='btn-5 '>Contact</button>
+                
+                <button className='btn-5 ' onClick={() => handleButtonClick('Contact')}>Contact</button>
             </div>
 
         </div>

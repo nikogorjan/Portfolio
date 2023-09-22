@@ -86,6 +86,7 @@
     font-size: clamp(0.75rem, 0.7167rem + 0.1778vw, 1rem);
     text-align: center;
     width: 90%;
+    z-index: 2;
 }
 
 .logos-flex{
@@ -112,7 +113,44 @@
     width: 42px;
 }
 
+.skillwrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 2;
+}
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to elements with the show-wrapper class */
+.show-wrapper:nth-child(1) {
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 0s;
+}
+
+.show-wrapper:nth-child(2) {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.show-wrapper:nth-child(3) {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.show-wrapper:nth-child(4) {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
 
 
 @media (max-width: 1430px) {
@@ -145,6 +183,33 @@
         background-color: #1F1F1F;
         z-index: 0;
     }
+
+    .new_skill {
+        
+        position: relative;
+    }
+
+    .new_skill::before {
+        width: 1px;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
+    
+    .new_skill::after {
+        height: 1px;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -156,6 +221,7 @@
     .new_skill {
         width: 100%;
         min-height: 320px;
+        position: relative;
     }
 
     .new_skill-row::before {
@@ -171,5 +237,28 @@
 
     .new_skill:first-child {
         border-right: 0px solid #1F1F1F;
+    }
+
+
+    .new_skill::before {
+        width: 1px;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
+    
+    .new_skill::after {
+        height: 1px;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
     }
 }

@@ -20,9 +20,9 @@
     width: 100%;
     height: 75px;
     background-color: rgb(9, 8, 13);
-    z-index: 1000;
+    z-index: 10;
     /* Ensure it's on top of other content */
-    transition: background-color 0.3s ease;
+    transition: background-color 1s ease;
     /* Optional transition effect */
     display: flex;
     justify-content:flex-end;
@@ -30,6 +30,24 @@
     align-items: center;
 
 
+}
+
+.demi-logo-holder{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.the-img{
+    width: 75px;
+    height: 75px;
+}
+
+.menu-opened{
+    background-color: black;
 }
 
 .navbar-main.scrolled {
@@ -60,9 +78,14 @@
 .navbar-links p {
     color: white;
     margin-left: 60px;
-    font-family: 'NunitoSans-Light';
-    font-size: 14px;
+    font-family: 'NunitoSans-Bold';
+    font-size: 12px;
     cursor: pointer;
+}
+
+.navbar-link{
+    font-family: 'NunitoSans-Bold';
+    font-size: 12px;
 }
 
 .navbar-links p:hover {
@@ -131,8 +154,8 @@
 .open-menu p {
     margin: 12px 0;
     color: white;
-    font-family: 'NunitoSans-Light';
-    font-size: 14px;
+    font-family: 'NunitoSans-Bold';
+    font-size: 12px;
     cursor: pointer;
 }
 

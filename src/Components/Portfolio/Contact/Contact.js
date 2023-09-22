@@ -54,7 +54,6 @@ function ContactForm() {
 
     return (
         <div className='contact-form-main'>
-            <div className="form-header">Contact Me</div>
             <div className='form-row'>
                 <div className='input-container'>
                     <input type='text' id='name' className='input-box' placeholder='Name' onChange={handleFullNameChange}/>

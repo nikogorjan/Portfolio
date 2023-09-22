@@ -1,0 +1,112 @@
+// Define SCSS variables
+$radius: 300px;
+$dotSize: 6px;
+$spokesNum: 36;
+$planesNum: 12;
+
+/* Main wrapper */
+.main-wrapper {
+  display: flex;
+  position: absolute;
+  transform-style: preserve-3d;
+  perspective: 400px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sphere wrapper */
+.sphere-wrapper {
+  transform-style: preserve-3d;
+  width: $radius;
+  height: $radius;
+  position: relative;
+  animation: rotate3d 10s linear infinite;
+}
+
+/* Individual planes */
+.plane {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Spokes */
+.spoke {
+  transform-origin: 0 0;
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: calc($radius / 2);
+  width: 0px;
+}
+
+/* Dots */
+.dot {
+  position: absolute;
+  width: $dotSize;
+  height: $dotSize;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 1);
+  left: calc(-1 * $dotSize / 2);
+  top: 100%;
+  transform: rotateX(90deg);
+}
+
+/* Place spokes and planes using loops */
+@for $i from 1 through $spokesNum {
+  $currDeg: calc(360deg / $spokesNum * $i);
+  .spoke-#{$i} {
+    transform: rotateZ(#{$currDeg});
+  }
+}
+
+@for $i from 1 through $planesNum {
+  $currDeg: calc(180deg / $planesNum * $i);
+  .plane-#{$i} {
+    transform: rotateY(#{$currDeg});
+  }
+}
+
+/* Animate dots */
+@for $i from 0 through floor($spokesNum / 2) {
+  $delay: calc(0.5s * $i / floor($spokesNum / 2));
+  $j: $spokesNum - $i;
+  $colorDeg: calc(360deg / $spokesNum * $i);
+
+  .spoke-#{$i} .dot, .spoke-#{$j} .dot {
+    animation: pulsate 0.5s infinite $delay alternate both;
+    background-color: spin(#f95, $colorDeg);
+  }
+}
+
+/* Keyframes */
+@keyframes rotate3d {
+  0% { transform: rotate3d(1, 1, 1, 0deg); }
+  25% { transform: rotate3d(1, 1, 1, 90deg); }
+  50% { transform: rotate3d(1, 1, 1, 180deg); }
+  75% { transform: rotate3d(1, 1, 1, 270deg); }
+  100% { transform: rotate3d(1, 1, 1, 360deg); }
+}
+
+@keyframes pulsate {
+  0% { transform: rotateX(90deg) scale(0.3) translateZ(20px); }
+  100% { transform: rotateX(90deg) scale(1) translateZ(0px); }
+}
+
+/* Animista badge */
+.animista-badge {
+  font: normal 15px/1.5 sans-serif;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.5em 1em;
+}

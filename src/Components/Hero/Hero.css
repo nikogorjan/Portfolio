@@ -164,7 +164,57 @@
     height: 100vh; /* Adjust the height as needed */
     background-color: black;
     z-index: 9;
-    transition: transform 2s ease; /* Add a transition for smoother sliding */
+}
+
+.hero-overflow2{
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+
+}
+
+.transition-slider{
+    transform: scaleY(0);
+    background-color: black;
+    width: 25%;
+    transform-origin: bottom center; /* Set the transform origin to top center */
+
+
+}
+
+.transition-slider.slide-in2 {
+    animation: slideIn2 1s forwards;
+}
+
+.transition-slider:nth-child(2).slide-in2 {
+    animation: slideIn2 1s forwards;
+    animation-delay: 0.2s; /* Adjust the delay as needed */
+  }
+  
+  .transition-slider:nth-child(3).slide-in2 {
+    animation: slideIn2 1s forwards;
+    animation-delay: 0.4s; /* Adjust the delay as needed */
+  }
+  
+  .transition-slider:nth-child(4).slide-in2 {
+    animation: slideIn2 1s forwards;
+    animation-delay: 0.6s; /* Adjust the delay as needed */
+  }
+
+
+@keyframes slideIn2 {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
 }
 
 @keyframes pulse {
