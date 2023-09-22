@@ -14,13 +14,91 @@
 }
 
 .footer-main{
-    padding: 50px;
-    background-color: rgba(255, 241, 165,1);
+    padding: 75px;
+    background-color: black;
+    padding-left: 100px;
+    display: flex;
+    z-index: 1;
+    position: relative;
+}
 
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .contact-header{
     font-family: 'NunitoSans-Bold';
-    color: rgb(9, 8, 13);
-    font-size: clamp(0.625rem, 0.5417rem + 0.4444vw, 1.25rem);
+    color: white;
+    font-size: clamp(0.625rem, 0.575rem + 0.2667vw, 1rem);
+}
+
+.contact-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.my-email{
+    margin-left: 20px;
+    font-family: 'NunitoSans-Light';
+    color: white;
+    font-size: clamp(0.625rem, 0.575rem + 0.2667vw, 1rem);
+}
+
+.socials-section{
+    margin-left: 200px;
+}
+
+.social-holder{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    margin-left: 0px;
+    margin-top: 0px;
+    
+}
+
+.sicials-row{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-position{
+    display: flex;
+}
+
+.contact-holder{
+    margin: 0px;
+}
+
+@media (max-width: 1000px) {
+    .footer-main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0px;
+    }
+
+    .socials-section{
+        margin-left: 0px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .final-position{
+        display: flex;
+        flex-direction: column;
+    }
 }

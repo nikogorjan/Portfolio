@@ -1,0 +1,219 @@
+.App{
+    width: 100vw;
+    overflow: hidden;
+}
+
+.animator-main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.my-works {
+    display: flex;
+    width: fit-content;
+    z-index: 1;
+    flex-wrap: nowrap;
+}
+
+
+.video-work {
+    width: 90%;
+    transform: translateY(-20px);
+    z-index: 1;
+}
+
+.first-work {
+    margin-left: 25%;
+
+}
+
+.space-100vh {
+    height: 100vh;
+}
+
+.racesWrapper {
+    overflow: hidden;
+}
+
+.races {
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.races h2 {
+    font-family: 'Staatliches', cursive;
+    font-size: 30vw;
+    flex-shrink: 0;
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+    color: #e10600;
+
+    margin: 0;
+}
+
+.container {
+    width: 500vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.firstContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: yellow;
+}
+
+.lastContainer {
+    display: flex;
+    height: 100vh;
+    background: yellow;
+}
+
+.panel {
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.red {
+    background-color: transparent;
+
+}
+
+.red {
+    background-color: transparent;
+
+}
+
+.orange {
+    background-color: transparent;
+
+}
+
+.purple {
+    background-color: transparent;
+
+}
+
+.blue {
+    background-color: transparent;
+}
+
+
+.App {
+    overflow: hidden;
+
+}
+
+.container-wrapper {
+    margin-left: 25%;
+}
+
+.fixed-bottom-div {
+    width: 100vw;
+    height: 40vh;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-25%);
+}
+
+.second-trigger-row {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+
+}
+
+.hidden-row{
+    display: none;
+    width: 100%;
+    
+}
+
+.work-void4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1400px) {
+    .astronaut-main{
+        transform: scale(0.5);
+    }
+}
+
+
+@media (max-width: 700px) {
+    .container-wrapper {
+        margin-left: 0%;
+    }
+    
+    .panel {
+        width: 100vw;
+    }
+
+    .fixed-bottom-div {
+
+        transform: translateX(0%);
+      }
+}
+
+@media (max-width: 500px) {
+    .container-wrapper {
+        margin-left: 0%;
+    }
+
+    .fixed-bottom-div {
+        height: 60vh;
+
+        transform: translateX(0%);
+      }
+
+      .panel {
+        width: 100vw;
+        height: 40vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .second-trigger-row {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+    
+    }
+
+    .work-void3{
+        display: none;
+    }
+
+    .work-void4{
+        display: none;
+    }
+
+    .work-paragraph{
+        width: 100%;
+    }
+
+    .hidden-row{
+        display: flex;
+        width: 100%;
+        height: 30vh;
+    }
+
+    .display-it{
+        display: flex;
+        width: 50%;
+    }
+}

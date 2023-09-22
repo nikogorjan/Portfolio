@@ -18,11 +18,12 @@
     background-color: rgb(9, 8, 13);
     padding-top: 10%;
     display: flex;
+    
 }
 
 .accounting-video{
     margin: 0 auto;
-    width: 50%;
+    width: 40%;
     display: flex;
 }
 
@@ -44,32 +45,54 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 60%;
     padding-bottom: 20px;
+    padding-bottom: 20%;
+    margin: 0 auto;
 }
 
 .business-header{
     color: white;
     font-family: 'NunitoSans-Bold';
-    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
-    width: 50%;
+    font-size: clamp(2rem, 1.4333rem + 3.0222vw, 6.25rem);
+
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     padding-top: 5%;
+    align-self: center;
 }
 
 .business-paragraph{
-    color: white;
-    font-family: 'NunitoSans-Light';
-    font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
-    width: 50%;
+    color: gray;
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(0.75rem, 0.5833rem + 0.8889vw, 2rem);
+      width: 100%;
     margin: 0 auto;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
+.dream{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.dream-img{
+    width: 100%;
+}
+
 @media (max-width: 1000px) {
+    .business-header{
+        text-align: left;
+    }
+
+    .business-paragraph{
+        text-align: justify;
+    }
+
     .accounting-video{
         margin: 0 auto;
         width: 90%;
@@ -82,11 +105,19 @@
 
     .business-header{
         padding-top: 10%;
-        width: 90%;
+        width: 100%;
 
     }
 
     .business-paragraph{
+        width: 100%;
+    }
+
+    .business-header{
+        padding-top: 20%;
+    }
+
+    .about-business{
         width: 90%;
     }
 }

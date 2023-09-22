@@ -22,7 +22,7 @@ function Hero() {
             // After showOverflow becomes true, navigate to "/Portfolio" after a 1-second delay
             const timeoutId = setTimeout(() => {
                 navigate('/Portfolio');
-            }, 1000);
+            }, 1600);
 
             return () => {
                 clearTimeout(timeoutId);
@@ -269,13 +269,20 @@ function Hero() {
 
                         <h1 className={`design ${showText3 ? 'show-text' : ''}`}>{typedText3}</h1>
 
-                        <h1 className={`database ${showText4 ? 'show-text' : ''}`}>{typedText4}</h1>
+                        <h1 className={`database ${showText4 ? 'show-text' : ''}`}>{typedText4}</h1> 
                     </div>
                 </div>
                 <div className='container-right' ></div>
             </div>
 
-            <div className={`hero-overflow ${showOverflow ? 'slide-in' : ''}`}></div>
+            {/*<div className={`hero-overflow ${showOverflow ? 'slide-in' : ''}`}></div>*/}
+            <div className='hero-overflow2'>
+                <div className={`transition-slider ${showOverflow ? 'slide-in2' : ''}`}></div>
+                <div className={`transition-slider ${showOverflow ? 'slide-in2' : ''}`}></div>
+                <div className={`transition-slider ${showOverflow ? 'slide-in2' : ''}`}></div>
+                <div className={`transition-slider ${showOverflow ? 'slide-in2' : ''}`}></div>
+
+            </div>
 
         </div>
 

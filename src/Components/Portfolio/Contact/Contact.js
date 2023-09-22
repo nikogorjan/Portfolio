@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import './Contact.css';
 import emailjs from '@emailjs/browser';
-import Dream from '../../../Resources/Images/dream.png';
 
 function ContactForm() {
     const [fullName, setFullName] = useState("");
@@ -55,7 +54,6 @@ function ContactForm() {
 
     return (
         <div className='contact-form-main'>
-            <div className="form-header">Contact Me</div>
             <div className='form-row'>
                 <div className='input-container'>
                     <input type='text' id='name' className='input-box' placeholder='Name' onChange={handleFullNameChange}/>
@@ -74,9 +72,7 @@ function ContactForm() {
 
             <div className='contact-button-container'><button className='btn-5 color-yello btn-margin' onClick={handleSubmit}>Send</button></div>
 
-            <div className="dream">
-                <img src={Dream} alt='dream Development' className="dream-img"/>
-            </div>
+            
         </div>
     );
 }

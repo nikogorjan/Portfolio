@@ -2,6 +2,12 @@ import { Routes, Route, BrowserRouter as Router } from "react-router-dom"; // Im
 import './App.css';
 import Main from "./Routes/Main/Main";
 import Portfolio from "./Components/Portfolio/Portfolio";
+import Projects from "./Routes/Projects/Projects";
+import Contact from "./Routes/Contact/Contact";
+import Tree from "./Routes/Projects/Websites/Tree/Tree";
+import Center from "./Routes/Projects/Websites/Center/Center";
+import Elra from "./Routes/Projects/Websites/Elra/Elra";
+import Acc from "./Routes/Projects/Websites/Acc/Acc";
 
 function App() {
   return (
@@ -9,6 +15,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/Portfolio" element={<Portfolio />} />
+        <Route path="/Projects" element={<Projects />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Projects/VanPeltsTrees" element={<Tree />} />
+        <Route path="/Projects/CenterGibanja" element={<Center />} />
+        <Route path="/Projects/ElektroElra" element={<Elra />} />
+        <Route path="/Projects/AccountingApp" element={<Acc />} />
 
       </Routes>
     </Router>

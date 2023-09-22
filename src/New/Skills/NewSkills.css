@@ -1,0 +1,264 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+}
+
+
+.NewSkills-main {
+    width: 100%;
+    display: flex;
+}
+
+.new_skill {
+    width: 50%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #1F1F1F;
+
+}
+
+.new_skill-row {
+    display: flex;
+    width: 50%;
+    position: relative;
+}
+
+.new_skill-row::before {
+    width: 1px;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+}
+
+.new_skill-row:first-child {
+    border-right: 1px solid #1F1F1F;
+}
+
+.skill-image {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire div */
+}
+
+.skills-header{
+    color: white;
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.3667rem + 0.7111vw, 2.5rem);
+    text-align: center;
+    
+}
+
+.skill-name{
+    text-align: center;
+    font-size: clamp(2rem, 1.9333rem + 0.3556vw, 2.5rem);
+       color: white;
+    font-family: 'NunitoSans-Bold';
+    margin: 20px;
+}
+
+.skills-paragraph{
+    color: gray;
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(0.75rem, 0.7167rem + 0.1778vw, 1rem);
+    text-align: center;
+    width: 90%;
+    z-index: 2;
+}
+
+.logos-flex{
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap into a new row */
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.logo-holder{
+    width: 32px;
+    height: 32px;
+    margin: 10px;
+}
+
+.logo-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire div */
+}
+
+.blender-holder{
+    width: 42px;
+}
+
+.skillwrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to elements with the show-wrapper class */
+.show-wrapper:nth-child(1) {
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 0s;
+}
+
+.show-wrapper:nth-child(2) {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.show-wrapper:nth-child(3) {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.show-wrapper:nth-child(4) {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+
+@media (max-width: 1430px) {
+    .NewSkills-main {
+        flex-direction: column;
+    }
+
+    .new_skill-row{
+        width: 100%;
+    }
+
+    .new_skill-row:first-child {
+        border-right: 0px solid #1F1F1F;
+    }
+
+    .new_skill:first-child {
+        border-right: 1px solid #1F1F1F;
+    }
+
+   
+    
+    
+    .new_skill-row::before {
+        width: 0px;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
+
+    .new_skill {
+        
+        position: relative;
+    }
+
+    .new_skill::before {
+        width: 1px;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
+    
+    .new_skill::after {
+        height: 1px;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .new_skill-row{
+        flex-direction: column;
+        
+    }
+
+    .new_skill {
+        width: 100%;
+        min-height: 320px;
+        position: relative;
+    }
+
+    .new_skill-row::before {
+        width: 0px;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
+
+    .new_skill:first-child {
+        border-right: 0px solid #1F1F1F;
+    }
+
+
+    .new_skill::before {
+        width: 1px;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
+    
+    .new_skill::after {
+        height: 1px;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
+}

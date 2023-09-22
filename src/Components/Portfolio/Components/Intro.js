@@ -1,4 +1,4 @@
-import React, { useEffect,  useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Intro.css';
 
 function Intro() {
@@ -29,35 +29,35 @@ function Intro() {
   return (
     <div className='introHero-main'>
       <div className='intro-hidden'>
-      <div className='right-wrapper'>
-        <div
-          className='shadow-planet'
-          style={{ width: shadowPlanetWidth, height: shadowPlanetHeight }}
-        >
-          <div className='planet'></div>
-        </div>
+        <div className='right-wrapper'>
+          <div
+            className='shadow-planet'
+            style={{ width: shadowPlanetWidth, height: shadowPlanetHeight }}
+          >
+            <div className='planet'></div>
+          </div>
         </div>
       </div>
       <div className='intro-left'>
         <div className='left-wrapper'>
-            <h1 className='intro-header1'>Niko Gorjan</h1>
-            <h2 className='intro-header2'>Full-Stack Developer</h2>
-            <div className='buttons-row'>
-              <button className='btn-5'>CV</button>
-              <button className='btn-5 color-yello'>Contact</button>
+          <h1 className='intro-header1'>Niko Gorjan</h1>
+          <h2 className='intro-header2'>Full-Stack Developer</h2>
+          <div className='buttons-row'>
+            <button className='btn-5'>CV</button>
+            <button className='btn-5 color-yello'>Contact</button>
 
-            </div>
+          </div>
 
-            </div>
+        </div>
       </div>
       <div className='intro-right'>
         <div className='right-wrapper'>
-        <div
-          className='shadow-planet'
-          style={{ width: shadowPlanetWidth, height: shadowPlanetHeight }}
-        >
-          <div className='planet'></div>
-        </div>
+          <div
+            className='shadow-planet'
+            style={{ width: shadowPlanetWidth, height: shadowPlanetHeight }}
+          >
+            <div className='planet'></div>
+          </div>
         </div>
       </div>
     </div>

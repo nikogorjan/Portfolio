@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+}
+
+
+.NewAccounting-main{
+    
+    width: 100vw;
+    background-color: transparent;
+    border-top: 1px solid #1F1F1F;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-acc{
+    width: 90%;
+}
+
+.left-accounting{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.right-accounting{
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.details{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #1F1F1F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'NunitoSans-Bold';
+    color: gray;
+    font-size: clamp(0.75rem, 0.5833rem + 0.8889vw, 2rem);
+}
+
+.detailed-paragraph{
+    font-family: 'NunitoSans-Bold';
+    color: gray;
+    font-size: clamp(0.75rem, 0.5833rem + 0.8889vw, 2rem);
+    width: 80%;
+    text-align: justify;
+}
+
+.NewAccounting-main::before {
+    width: 1px;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+}
+
+.details::after {
+    height: 1px;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+
+}
+
+.details::before {
+    width: 1px;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+}
+
+
+
+
+.spacer {
+	width:100%;
+	height:50vh;
+	background:#ddd;
+}
+
+
+.r-row{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.r-cell{
+    width: 50%;
+    height: 100%;
+}
+
+
+
+.r-row:first-child {
+    /* Add your styles for the first .r-cell here */
+    border-bottom: 1px solid #1F1F1F;
+
+  }
+
+ 
+
+ #anything svg {
+    
+    width: 100%;
+}
+
+.scroll-demo {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: white;
+    height: 0;
+    margin-bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#jet2{
+}
+
+.cell2{
+    color: white;
+    font-family: 'NunitoSans-Bold';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.5rem, 1.3667rem + 0.7111vw, 2.5rem);
+    cursor: pointer;
+    transition: all 2250ms cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+/*.cell2:hover{
+    background-color: rgb(255, 241, 165);
+    color: black;
+}*/
+
+.r-row{
+    position: relative;
+}
+
+.r-row::before {
+    width: 1px;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    content: "\a";
+    position: absolute;
+    background-color: #1F1F1F;
+    z-index: 0;
+}
+
+.acc-paragraph-container{
+    width: 70%;
+}
+
+@media (max-width: 1000px) {
+    .NewAccounting-main{
+        flex-direction: column;
+    }
+    .acc-paragraph-container{
+        width: 90%;
+    }
+
+    .left-accounting{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60vh;
+        border-bottom: 1px solid #1F1F1F;
+
+    }
+
+    .right-accounting{
+        width: 100%;
+        
+    }
+
+    .video-acc{
+        width: 80%;
+    }
+
+    .NewAccounting-main::before {
+        width: 0px;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        content: "\a";
+        position: absolute;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
+}
+
+@media (max-width: 850px) {
+    .left-accounting{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        
+    }
+
+    .r-row{
+        height: 30vh;
+        width: 100%;
+        border-bottom: 1px solid #1F1F1F;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .video-acc{
+        width: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    .video-acc{
+        width: 90%;
+    }
+
+    .left-accounting{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40vh;
+        
+    }
+
+    .letter-main{
+        transform: scale(0.5);
+    }
+
+}

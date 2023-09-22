@@ -1,0 +1,242 @@
+.Tree-main{
+    width: 100%;
+    margin-top: 75px;
+    border-top: 1px solid #1F1F1F;
+    z-index: 1;
+    position: relative;
+}
+
+.project-video{
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+}
+
+.project-paragraphs{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.the-video{
+    width: 100%;
+
+}
+
+.project-row{
+    width: 100%;
+    display: flex;
+}
+
+.project-secondary-row{
+    display: flex;
+    width: 50%;
+}
+
+.project-cell{
+    height: 100%;
+    width: 50%;
+    border-top: 1px solid #1F1F1F;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-cell:nth-child(1){
+    border-right: 1px solid #1F1F1F;
+
+}
+
+.project-cell:nth-child(2){
+    border-right: 1px solid #1F1F1F;
+
+}
+
+.project-cell:nth-child(3){
+    border-right: 1px solid #1F1F1F;
+
+}
+
+.project-cell-header{
+    color: gray;
+    font-size: clamp(1.5rem, 1.3667rem + 0.7111vw, 2.5rem);
+    text-align: center;
+}
+
+.project-cell-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.stack-row{
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap into a new row */
+    justify-content: center;
+    align-items: center;
+}
+
+.back-button{
+    color: black;
+}
+
+.work-void3:hover .back-button{
+    color: white;
+}
+
+.button-cell:hover .project-cell-header{
+    color: white;
+}
+
+.project-left{
+    display: flex;
+    
+}
+
+.project-layout{z-index: 1;}
+
+.project-paragraphs-wrapper{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    animation: change-position 3s forwards;
+
+}
+
+.projects-name{
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(2rem, 1.9333rem + 0.3556vw, 2.5rem);
+    z-index: 1;
+
+    color: white;
+    position: relative;
+}
+
+.projects-paragraph{
+    color: gray;
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(0.75rem, 0.7167rem + 0.1778vw, 1rem);
+    text-align: justify;
+}
+
+@keyframes fillProgressBar {
+    0% {
+      width: 0; /* Start with 0% width */
+    }
+    100% {
+      width: 50%; /* End with 50% width */
+    }
+  }
+
+.progress-bar {
+    width: 100%;
+    background-color: gray; /* Background color of the progress bar container */
+    border-radius: 4px; /* Add rounded corners for a modern look */
+    margin-top: 20px;
+  }
+  
+  .progress {
+    width: 50%;
+    height: 10px; /* Adjust the height of the progress bar */
+    background-color: rgb(255, 241, 165);
+    border-radius: 4px; /* Match the border radius of the container */
+    animation: fillProgressBar 3s ease-in-out; /* Remove 'forwards' */
+
+  }
+
+  @keyframes fillProgressBar2 {
+    0% {
+      width: 0; /* Start with 0% width */
+    }
+    100% {
+      width: 100%; /* End with 50% width */
+    }
+  }
+
+
+  .progress2{
+    width: 100%;
+    height: 10px; /* Adjust the height of the progress bar */
+    background-color: rgb(255, 241, 165);
+    border-radius: 4px; /* Match the border radius of the container */
+    animation: fillProgressBar2 3s ease-in-out; /* Remove 'forwards' */
+  }
+
+  @keyframes fillProgressBar3 {
+    0% {
+      width: 0; /* Start with 0% width */
+    }
+    100% {
+      width: 80%; /* End with 50% width */
+    }
+  }
+
+
+  .progress3{
+    width: 80%;
+    height: 10px; /* Adjust the height of the progress bar */
+    background-color: rgb(255, 241, 165);
+    border-radius: 4px; /* Match the border radius of the container */
+    animation: fillProgressBar3 3s ease-in-out; /* Remove 'forwards' */
+  }
+
+  .button-cell:hover{
+    cursor: pointer;
+    background-color: rgb(9, 8, 13);
+    border: 1px solid #1F1F1F;
+    box-shadow: inset 0 0 100px rgba(255, 241, 165,.5), 0 0 100px rgba(255, 241, 165,.2);
+    outline-color: #1F1F1F;
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+    color: white;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+
+  }
+
+@media (max-width: 1400px) {
+    .project-row{
+        flex-direction: column;
+    }
+
+    .project-secondary-row{
+        display: flex;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .project-video{
+        width: 100%;
+    }
+
+    .project-left{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-paragraphs{
+        width: 100%;}
+
+        .project-paragraphs{
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+}
+
+@media (max-width: 800px) {
+    .project-secondary-row{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .project-cell{
+        width: 100%;
+    }
+}
