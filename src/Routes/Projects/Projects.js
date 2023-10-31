@@ -9,6 +9,7 @@ import work1 from '../../Resources/Videos/work1.mp4'
 import work2 from '../../Resources/Videos/work2.mp4'
 import work3 from '../../Resources/Videos/work3.mp4'
 import work4 from '../../Resources/Videos/accountingEdited.mov'
+import { Helmet } from 'react-helmet-async';
 
 
 function ProjectCell({ videoSrc, title, onClick }) {
@@ -78,6 +79,11 @@ function Projects() {
 
     return (
         <div className='projects-main'>
+            <Helmet>
+            <title>Projects</title>
+                <meta name='description' content="Explore Niko Gorjan's web & e-commerce projects, 3D modeling, design, and development work."></meta>
+                <link rel='canonical' href='/Projects'></link>
+            </Helmet>
             <Navbar onButtonClick={handleButtonClick} />
 
             <div className='fade-overflow2'>

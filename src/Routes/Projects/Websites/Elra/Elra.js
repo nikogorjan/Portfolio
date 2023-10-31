@@ -11,6 +11,7 @@ import css from '../../../../Resources/Images/CSS.png'
 import js from '../../../../Resources/Images/JavaScript.png'
 import react from '../../../../Resources/Images/React-01.png'
 import blender from '../../../../Resources/Images/spline-logos-idx0zotd8Y.png'
+import { Helmet } from 'react-helmet-async';
 
 function Elra() {
     const [clickedInfo, setClickedInfo] = useState('');
@@ -41,6 +42,11 @@ function Elra() {
 
     return (
         <div>
+            <Helmet>
+            <title>Elra</title>
+                <meta name='description' content="Niko Gorjan developed a multilingual website for Elra Electroinstalation."></meta>
+                <link rel='canonical' href='/Projects/Elra'></link>
+            </Helmet>
                         <div className='contact-bg'></div>
 
         
@@ -58,7 +64,7 @@ function Elra() {
             <div className='project-layout'>
                 <div className='project-left'>
                     <div className='project-video'>
-                        <video autoPlay loop muted className='the-video'>
+                        <video autoPlay loop muted playsInline className='the-video'>
                             <source src={video} type="video/mp4" />
                             Your browser does not support HTML5 video.
                         </video>
