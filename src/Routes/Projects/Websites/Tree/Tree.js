@@ -11,6 +11,7 @@ import css from '../../../../Resources/Images/CSS.png'
 import js from '../../../../Resources/Images/JavaScript.png'
 import react from '../../../../Resources/Images/React-01.png'
 import blender from '../../../../Resources/Images/Blender_logo_no_text.svg.png'
+import { Helmet } from 'react-helmet-async';
 
 function Tree() {
     const [clickedInfo, setClickedInfo] = useState('');
@@ -41,6 +42,11 @@ function Tree() {
 
     return (
         <div>
+            <Helmet>
+            <title>Van Pelt's Tree & Lawn Care</title>
+                <meta name='description' content="Niko Gorjan designed a website for a Dayton, Ohio tree services company."></meta>
+                <link rel='canonical' href='/Projects/VanPeltsTrees'></link>
+            </Helmet>
                         <div className='contact-bg'></div>
 
         <div className='Tree-main'>
@@ -57,7 +63,7 @@ function Tree() {
             <div className='project-layout'>
                 <div className='project-left'>
                     <div className='project-video'>
-                        <video autoPlay loop muted className='the-video'>
+                        <video autoPlay loop muted playsInline className='the-video'>
                             <source src={video} type="video/mp4" />
                             Your browser does not support HTML5 video.
                         </video>
@@ -87,7 +93,7 @@ function Tree() {
                         <div className='project-cell'>
                             <div className='project-cell-wrapper'>
                                 <h1 className='project-cell-header'>Progress</h1>
-                                <div className='progress-bar'>
+                                <div className='progress-bar'> 
                                     <div className='progress'></div>
                                 </div>
                             </div>
@@ -95,7 +101,7 @@ function Tree() {
 
                     </div>
                     <div className='project-secondary-row'>
-                        <div className='project-cell button-cell' onClick={() => window.open('https://fantastic-puffpuff-965e73.netlify.app/', '_blank')}>
+                        <div className='project-cell button-cell' onClick={() => window.open('https://vanpeltstreeservice.com/', '_blank')}>
                             <div className='project-cell-wrapper'>
                                 <h1 className='project-cell-header '>Visit Website</h1>
                             </div>

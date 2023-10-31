@@ -84,6 +84,7 @@ function WorkAnimation({ onButtonClick }) {
                             autoPlay
                             loop
                             muted
+                            playsInline
                             src={Work1}
                         ></video>
                     </div>
@@ -92,6 +93,7 @@ function WorkAnimation({ onButtonClick }) {
                         autoPlay
                         loop
                         muted
+                        playsInline
                         src={Work2}
                     ></video></div>
                     <div className="panel purple"><video
@@ -99,6 +101,7 @@ function WorkAnimation({ onButtonClick }) {
                         autoPlay
                         loop
                         muted
+                        playsInline
                         src={Work3}
                     ></video></div>
                     <div className="fixed-bottom-div">

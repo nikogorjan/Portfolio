@@ -10,6 +10,7 @@ import WorkAnimation from '../../New/NewWork/WorkAnimation';
 import NewAccounting from '../../New/NewAccounting/NewAccounting';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { scrollToTop } from '../../Routes/Projects/scrollUtils'; // Import the utility function
+import { Helmet } from 'react-helmet-async';
 
 function Portfolio() {
     const [hasRefreshed, setHasRefreshed] = useState(false);
@@ -56,7 +57,12 @@ function Portfolio() {
     }, []);
 
     return (
-        <div>           
+        <div>    
+            <Helmet>
+            <title>Portfolio</title>
+                <meta name='description' content='Niko Gorjan: Computer scientist, web & e-commerce developer, 3D modeling, design, front-end & back-end.'></meta>
+                <link rel='canonical' href='/Portfolio'></link>    
+            </Helmet>       
              <div className='contact-bg'></div>
         
         <div className='portfolio-main'>

@@ -12,6 +12,7 @@ import js from '../../../../Resources/Images/JavaScript.png'
 import react from '../../../../Resources/Images/React-01.png'
 import node from '../../../../Resources/Images/Node-JS-01.png'
 import sq from '../../../../Resources/Images/MySQL-01.png'
+import { Helmet } from 'react-helmet-async';
 
 function Center() {
     const [clickedInfo, setClickedInfo] = useState('');
@@ -42,6 +43,11 @@ function Center() {
 
     return (
         <div>
+            <Helmet>
+            <title>Center Gibanja</title>
+                <meta name='description' content="Niko Gorjan designed a CMS website for a gym in Murska Sobota, Slovenia."></meta>
+                <link rel='canonical' href='/Projects/CenterGibanja'></link>
+            </Helmet>
                         <div className='contact-bg'></div>
 
         <div className='Tree-main'>
@@ -58,7 +64,7 @@ function Center() {
             <div className='project-layout'>
                 <div className='project-left'>
                     <div className='project-video'>
-                        <video autoPlay loop muted className='the-video'>
+                        <video autoPlay loop muted playsInline className='the-video'>
                             <source src={video} type="video/mp4" />
                             Your browser does not support HTML5 video.
                         </video>

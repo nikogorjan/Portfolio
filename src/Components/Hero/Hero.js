@@ -254,7 +254,7 @@ function Hero() {
     return (
         <div className='hero-overflow-hide'>
         <div className='hero-main'>
-            <video autoPlay loop muted className='hero-video' ref={videoRef}>
+            <video autoPlay loop muted playsInline className='hero-video' ref={videoRef}>
                 <source src={HeroVideo} type='video/mp4' />
             </video>
 
