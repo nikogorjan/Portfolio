@@ -5,11 +5,19 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Solar from '../../New/Solar/Solar';
 import Footer from '../../Components/Portfolio/Footer/Footer';
 import { scrollToTop } from './scrollUtils'; // Import the utility function
-import work1 from '../../Resources/Videos/work1.mp4'
-import work2 from '../../Resources/Videos/work2.mp4'
-import work3 from '../../Resources/Videos/work3.mp4'
-import work4 from '../../Resources/Videos/accountingEdited.mov'
 import { Helmet } from 'react-helmet-async';
+
+import c1 from '../../Resources/Images/c1.webp'
+import c2 from '../../Resources/Images/c2.webp'
+import c3 from '../../Resources/Images/c3.webp'
+import c4 from '../../Resources/Images/c4.webp'
+import c5 from '../../Resources/Images/c5.webp'
+import c6 from '../../Resources/Images/c6.webp'
+import c7 from '../../Resources/Images/c7.webp'
+import c8 from '../../Resources/Images/c8.webp'
+import c9 from '../../Resources/Images/c9.webp'
+import c10 from '../../Resources/Images/10.webp'
+import GoogleAnalytics from '../../GoogleAnalytics/GoogleAnalytics';
 
 
 function ProjectCell({ videoSrc, title, onClick }) {
@@ -32,7 +40,7 @@ function ProjectCell({ videoSrc, title, onClick }) {
 
         >
             {isHovered ? (
-                <video autoPlay muted loop src={videoSrc} />
+                <img autoPlay muted loop src={videoSrc} className='cell-image'/>
             ) : (
                 <h3 className='video-tittle'>{title}</h3>
             )}
@@ -55,7 +63,6 @@ function Projects() {
         setTimeout(() => {
             if (info === 'Projects') {
                 setButtonClicked(false);
-
                 navigate('/Projects');
             } else if (info === 'Contact') {
                 navigate('/Contact');
@@ -69,7 +76,21 @@ function Projects() {
                 navigate('/Projects/ElektroElra');
             }else if (info === 'Acc') {
                 navigate('/Projects/AccountingApp');
+            }else if (info === 'tm') {
+                navigate('/Projects/TMLifestyleCoaching');
+            }else if (info === 'horion') {
+                navigate('/Projects/horion');
+            }else if (info === 'haus') {
+                navigate('/Projects/Hausbetreung');
+            }else if (info === 'velins') {
+                navigate('/Projects/VelinsShop');
+            }else if (info === 'mediam') {
+                navigate('/Projects/MediaM');
+            }else if (info === 'jasha') {
+                navigate('/Projects/JashaBrewing');
             }
+           
+
         }, 1600); // 1.6 seconds (1600 milliseconds) delay
     };
 
@@ -84,6 +105,7 @@ function Projects() {
                 <meta name='description' content="Explore Niko Gorjan's web & e-commerce projects, 3D modeling, design, and development work."></meta>
                 <link rel='canonical' href='/Projects'></link>
             </Helmet>
+            <GoogleAnalytics/>
             <Navbar onButtonClick={handleButtonClick} />
 
             <div className='fade-overflow2'>
@@ -106,14 +128,32 @@ function Projects() {
             </div>
             <div className='projects-row'>
                 <div className='secondary-row'>
-                    <ProjectCell title='Van Pelts Tree Services and Lawn Care' videoSrc={work1} onClick={() => handleButtonClick('Tree')}/>
-                    <ProjectCell title='Center Gibanja' videoSrc={work2} onClick={() => handleButtonClick('Cg')}/>
+                    <ProjectCell title='TM Lifestyle Coaching' videoSrc={c1} onClick={() => handleButtonClick('tm')}/>
+                    <ProjectCell title='Horion' videoSrc={c3} onClick={() => handleButtonClick('horion')}/>
                 </div>
                 <div className='secondary-row'>
-                    <ProjectCell title='Elektro-Elra' videoSrc={work3} onClick={() => handleButtonClick('Elra')}/>
-                    <ProjectCell title='Accounting App' videoSrc={work4} onClick={() => handleButtonClick('Acc')}/>
+                    <ProjectCell title='Hausbetreung' videoSrc={c2} onClick={() => handleButtonClick('haus')}/>
+                    <ProjectCell title='Velins Shop' videoSrc={c4} onClick={() => handleButtonClick('velins')}/>
 
                 </div>
+            </div>
+            <div className='projects-row'>
+                <div className='secondary-row'>
+                    <ProjectCell title='Van Pelts Tree Services and Lawn Care' videoSrc={c6} onClick={() => handleButtonClick('Tree')}/>
+                    <ProjectCell title='Media M' videoSrc={c5} onClick={() => handleButtonClick('mediam')}/>
+                </div>
+                <div className='secondary-row'>
+                    <ProjectCell title='Center gibanja' videoSrc={c7} onClick={() => handleButtonClick('Cg')}/>
+                    <ProjectCell title='Elektro-Elra' videoSrc={c8} onClick={() => handleButtonClick('Elra')}/>
+
+                </div>
+            </div>
+            <div className='projects-row smallerrow'>
+                <div className='secondary-row'>
+                    <ProjectCell title='Jasha Brewing' videoSrc={c9} onClick={() => handleButtonClick('jasha')}/>
+                    <ProjectCell title='Accounting App' videoSrc={c10} onClick={() => handleButtonClick('Acc')}/>
+                </div>
+                
             </div>
             {/*<Solar/>*/}
             <div className='contact-bg'></div>

@@ -13,6 +13,7 @@ import react from '../../../../Resources/Images/React-01.png'
 import node from '../../../../Resources/Images/Node-JS-01.png'
 import sq from '../../../../Resources/Images/MySQL-01.png'
 import { Helmet } from 'react-helmet-async';
+import GoogleAnalytics from '../../../../GoogleAnalytics/GoogleAnalytics';
 
 function Center() {
     const [clickedInfo, setClickedInfo] = useState('');
@@ -49,7 +50,7 @@ function Center() {
                 <link rel='canonical' href='/Projects/CenterGibanja'></link>
             </Helmet>
                         <div className='contact-bg'></div>
-
+<GoogleAnalytics/>
         <div className='Tree-main'>
             <Navbar onButtonClick={handleButtonClick} />
 

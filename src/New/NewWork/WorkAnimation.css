@@ -16,10 +16,27 @@
 }
 
 
-.video-work {
+
+.slider-img{
     width: 90%;
     transform: translateY(-20px);
     z-index: 1;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.slider-img:hover{
+    transform: scale(1.02) translateY(-30px);
+}
+
+.video-work{
+    transition: all 0.3s ease;
+
+}
+
+
+.video-work:hover{
+    transform: scale(1.02) translateY(-30px);
 }
 
 .first-work {
@@ -56,7 +73,7 @@
     width: 500vw;
     height: 100vh;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
 }
 
@@ -76,12 +93,34 @@
 }
 
 .panel {
-    width: 50vw;
+    width: 45vw;
     height: 60vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    cursor: pointer;
 }
+
+.notsowide{
+    width: 45vw;
+}
+
+.video-work {
+    width: 90%;
+    transform: translateY(-20px);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+
+
+.video16 {
+    width: 67.5%; /* Adjusted width to ensure the height matches other 16:9 videos */
+    transform: translateY(-20px);
+    z-index: 1;
+    object-fit: cover; /* Ensures it covers the area correctly */
+}
+
 
 .red {
     background-color: transparent;
@@ -146,10 +185,27 @@
     justify-content: center;
 }
 
+.panel, .container {
+    will-change: transform;
+}
+
 @media (max-width: 1400px) {
     .astronaut-main{
         transform: scale(0.5);
     }
+
+    .slider-img{
+        width: 90%;
+        transform: translateY(-20px);
+        z-index: 1;
+        border-radius: 4px;
+    }
+
+    .video-work {
+        border-radius: 4px;
+
+    }
+
 }
 
 
@@ -166,6 +222,14 @@
 
         transform: translateX(0%);
       }
+
+      .container {
+        width: 1000vw;
+        height: 100vh;
+        display: flex;
+        flex-wrap: nowrap;
+    
+    }
 }
 
 @media (max-width: 500px) {

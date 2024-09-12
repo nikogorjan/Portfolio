@@ -18,6 +18,8 @@ import figma from '../../Resources/Images/Figma-01.png'
 import ps from '../../Resources/Images/Adobe-Photoshop-CC-01.png'
 import blender from '../../Resources/Images/Blender_logo_no_text.svg.png'
 import spline from '../../Resources/Images/spline-logos-idx0zotd8Y.png'
+import next from '../../Resources/Images/next.png'
+import wp from '../../Resources/Images/wp.png'
 
 function NewSkills() {
     const skillwrapperRef = useRef(null);
@@ -70,6 +72,8 @@ function NewSkills() {
                             <div className='logo-holder'><img src={react} alt='react Development' /></div>
                             <div className='logo-holder'><img src={flutter} alt='fl Development' /></div>
                             <div className='logo-holder'><img src={net} alt='net Development' /></div>
+                            <div className='logo-holder'><img src={next} alt='next Development' /></div>
+
                         </div>
                     </div>
                 </div>
@@ -85,6 +89,7 @@ function NewSkills() {
                             <div className='logo-holder'><img src={sql} alt='sql Development' /></div>
                             <div className='logo-holder'><img src={fire} alt='fire Development' /></div>
                             <div className='logo-holder'><img src={sharp} alt='sharp Development' /></div>
+                            <div className='logo-holder'><img src={wp} alt='sharp Development' /></div>
 
                         </div>
 
