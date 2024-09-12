@@ -12,6 +12,7 @@ import js from '../../../../Resources/Images/JavaScript.png'
 import react from '../../../../Resources/Images/React-01.png'
 import blender from '../../../../Resources/Images/spline-logos-idx0zotd8Y.png'
 import { Helmet } from 'react-helmet-async';
+import GoogleAnalytics from '../../../../GoogleAnalytics/GoogleAnalytics';
 
 function Acc() {
     const [clickedInfo, setClickedInfo] = useState('');
@@ -49,7 +50,7 @@ function Acc() {
             </Helmet>
                        <div className='contact-bg'></div>
 
-        
+        <GoogleAnalytics/>
         <div className='Tree-main'>
            <Navbar onButtonClick={handleButtonClick}/>
 

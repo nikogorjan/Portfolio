@@ -3,13 +3,21 @@ import './WorkAnimation.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import Work1 from '../../Resources/Videos/work1.mp4'
-import Work2 from '../../Resources/Videos/work2.mp4'
-import Work3 from '../../Resources/Videos/work3.mp4'
+
+
 import Astronaut from '../Astronaut/Astronaut';
+import c1 from '../../Resources/Images/c1.webp'
+import c2 from '../../Resources/Images/c2.webp'
+import c3 from '../../Resources/Images/c3.webp'
+import c4 from '../../Resources/Images/c4.webp'
+import c5 from '../../Resources/Images/c5.webp'
+import c6 from '../../Resources/Images/c6.webp'
+import c7 from '../../Resources/Images/c7.webp'
+import Work4 from '../../Resources/Videos/Editedd.mp4'
+import Work5 from '../../Resources/Videos/kolagen.mp4'
 
 function WorkAnimation({ onButtonClick }) {
-    
+
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -27,12 +35,9 @@ function WorkAnimation({ onButtonClick }) {
                 scrollTrigger: {
                     trigger: ".container",
                     pin: true,
-                    scrub: 1,
-                    /*snap: 1 / (panels.length - 1),*/
+                    scrub: 1, // Slows down the scrub effect
                     start: 'top top',
-                    end: () => "+=" + slider.current.offsetWidth/4,
-                    /*markers: true,*/
-
+                    end: () => "+=" + slider.current.offsetWidth/1, // Extends the end point
                 }
             });
 
@@ -50,7 +55,7 @@ function WorkAnimation({ onButtonClick }) {
                         ease: 'power3.easeOut', // Adjust the easing as needed
                     });
                 },
-                once:true
+                once: true
             });
         }, component);
         return () => {
@@ -58,9 +63,9 @@ function WorkAnimation({ onButtonClick }) {
 
             gsap.killTweensOf(".panel"); // Adjust the selector as needed
             gsap.set(".panel", { clearProps: "all" }); // Clear any applied styles
-            
+
             // Kill the ScrollTrigger instance
-            
+
 
         }
     });
@@ -69,7 +74,7 @@ function WorkAnimation({ onButtonClick }) {
         // Call the function passed from the parent component with the info
         console.log("clicked");
         onButtonClick(info);
-        
+
     };
 
 
@@ -78,37 +83,84 @@ function WorkAnimation({ onButtonClick }) {
             <div className='container-wrapper'>
                 <div ref={slider} className="container">
 
-                    <div className="panel red ">
-                        <video
-                            className='video-work'
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            src={Work1}
-                        ></video>
+                <div className="panel red " onClick={() => handleButtonClick('tm')}>
+                        <img
+                            className='slider-img'
+                            alt='c1'
+                            src={c1}
+                        ></img>
                     </div>
-                    <div className="panel orange"><video
+                    <div className="panel red " onClick={() => handleButtonClick('horion')}>
+                        <img
+                            className='slider-img'
+                            alt='c3'
+
+                            src={c3}
+                        ></img>
+                    </div>
+                    <div className="panel purple" onClick={() => window.open('https://www.youtube.com/watch?v=drfBL2YxySc', '_blank')}><video
                         className='video-work'
                         autoPlay
                         loop
                         muted
                         playsInline
-                        src={Work2}
+                        src={Work4}
                     ></video></div>
-                    <div className="panel purple"><video
-                        className='video-work'
+                    <div className="panel red " onClick={() => handleButtonClick('haus')}>
+                        <img
+                            className='slider-img'
+                            alt='c2'
+
+                            src={c2}
+                        ></img>
+                    </div>
+                    <div className="panel red " onClick={() => handleButtonClick('velins')}>
+                        <img
+                            className='slider-img'
+                            alt='c4'
+
+                            src={c4}
+                        ></img>
+                    </div>
+                    <div className="panel purple notsowide" onClick={() => window.open('https://www.youtube.com/watch?v=8Dj9S6yHseI', '_blank')}><video
+                        className='video-work video16'
                         autoPlay
                         loop
                         muted
                         playsInline
-                        src={Work3}
+                        src={Work5}
                     ></video></div>
+                    <div className="panel red " onClick={() => handleButtonClick('Tree')}>
+                        <img
+                            className='slider-img'
+                            alt='c6'
+
+                            src={c6}
+                        ></img>
+                    </div>
+                    <div className="panel red " onClick={() => handleButtonClick('mediam')}>
+                        <img
+                            className='slider-img'
+                            alt='c5'
+
+                            src={c5}
+                        ></img>
+                    </div>
+                    <div className="panel red " onClick={() => handleButtonClick('Cg')}>
+                        <img
+                            className='slider-img'
+                            alt='c7'
+
+                            src={c7}
+                        ></img>
+                    </div>
+                    
+                    
                     <div className="fixed-bottom-div">
                         <div className='trigger-row-wrapper'>
                             <div className='second-trigger-row'>
                                 <div className='work-void3' onClick={() => handleButtonClick('Projects')}>
-                                    <p className='void3-text'>Read more</p>
+                                    <p className='void3-text'>All projects</p>
                                 </div>
                                 <div className='work-paragraph'>
                                     <div className='work-paragraph-container' ref={workParagraph} style={{ transform: 'translateX(100%)', opacity: 0 }}>
@@ -117,14 +169,14 @@ function WorkAnimation({ onButtonClick }) {
 
                                     </div>
                                 </div>
-                                <div className='work-void4'><Astronaut className='scale-astronaut'/></div>
+                                <div className='work-void4'><Astronaut className='scale-astronaut' /></div>
                             </div>
 
                             <div className='hidden-row'>
                                 <div className='work-void3 display-it' onClick={() => handleButtonClick('Projects')}>
-                                    <p className='void3-text'>Read more</p>
+                                    <p className='void3-text'>All projects</p>
                                 </div>
-                                <div className='work-void4 display-it'><Astronaut className='scale-astronaut'/></div>
+                                <div className='work-void4 display-it'><Astronaut className='scale-astronaut' /></div>
                             </div>
                         </div>
                     </div>

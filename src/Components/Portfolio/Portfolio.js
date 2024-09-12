@@ -11,6 +11,7 @@ import NewAccounting from '../../New/NewAccounting/NewAccounting';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { scrollToTop } from '../../Routes/Projects/scrollUtils'; // Import the utility function
 import { Helmet } from 'react-helmet-async';
+import GoogleAnalytics from '../../GoogleAnalytics/GoogleAnalytics';
 
 function Portfolio() {
     const [hasRefreshed, setHasRefreshed] = useState(false);
@@ -33,6 +34,29 @@ function Portfolio() {
                 setButtonClicked(false);
 
                 navigate('/Portfolio');
+            }
+            else if (info === 'tm') {
+                navigate('/Projects/TMLifestyleCoaching');
+            }else if (info === 'Tree') {
+                navigate('/Projects/VanPeltsTrees');
+            }else if (info === 'Cg') {
+                navigate('/Projects/CenterGibanja');
+            }else if (info === 'Elra') {
+                navigate('/Projects/ElektroElra');
+            }else if (info === 'Acc') {
+                navigate('/Projects/AccountingApp');
+            }else if (info === 'tm') {
+                navigate('/Projects/TMLifestyleCoaching');
+            }else if (info === 'horion') {
+                navigate('/Projects/horion');
+            }else if (info === 'haus') {
+                navigate('/Projects/Hausbetreung');
+            }else if (info === 'velins') {
+                navigate('/Projects/VelinsShop');
+            }else if (info === 'mediam') {
+                navigate('/Projects/MediaM');
+            }else if (info === 'jasha') {
+                navigate('/Projects/JashaBrewing');
             }
         }, 1600); // 1.6 seconds (1600 milliseconds) delay
     };
@@ -62,7 +86,8 @@ function Portfolio() {
             <title>Portfolio</title>
                 <meta name='description' content='Niko Gorjan: Computer scientist, web & e-commerce developer, 3D modeling, design, front-end & back-end.'></meta>
                 <link rel='canonical' href='/Portfolio'></link>    
-            </Helmet>       
+            </Helmet>    
+            <GoogleAnalytics/>   
              <div className='contact-bg'></div>
         
         <div className='portfolio-main'>

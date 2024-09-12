@@ -12,6 +12,7 @@ import js from '../../../../Resources/Images/JavaScript.png'
 import react from '../../../../Resources/Images/React-01.png'
 import blender from '../../../../Resources/Images/Blender_logo_no_text.svg.png'
 import { Helmet } from 'react-helmet-async';
+import GoogleAnalytics from '../../../../GoogleAnalytics/GoogleAnalytics';
 
 function Tree() {
     const [clickedInfo, setClickedInfo] = useState('');
@@ -48,7 +49,7 @@ function Tree() {
                 <link rel='canonical' href='/Projects/VanPeltsTrees'></link>
             </Helmet>
                         <div className='contact-bg'></div>
-
+            <GoogleAnalytics/>
         <div className='Tree-main'>
             <Navbar onButtonClick={handleButtonClick} />
 

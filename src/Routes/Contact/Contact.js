@@ -15,6 +15,7 @@ import mail from '../../Resources/Images/mail.svg'
 import EarthAnimation from './EarthAnimation';
 import emailjs from '@emailjs/browser';
 import { Helmet } from 'react-helmet-async';
+import GoogleAnalytics from '../../GoogleAnalytics/GoogleAnalytics';
 
 function Contact() {
     const [clickedInfo, setClickedInfo] = useState('');
@@ -109,7 +110,7 @@ function Contact() {
                 <meta name='description' content="Get in touch with Niko Gorjan: Computer scientist, web developer, and 3D artist."></meta>
                 <link rel='canonical' href='/Contact'></link>
             </Helmet>
-
+            <GoogleAnalytics/>
             <div className='fade-overflow2'>
                 <div className={`portfolio-transition-slider ${buttonClicked ? 'button-clicked' : ''}`}></div>
                 <div className={`portfolio-transition-slider ${buttonClicked ? 'button-clicked' : ''}`}></div>
