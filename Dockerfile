@@ -1,35 +1,29 @@
-# Stage 1: Build the React app
-FROM node:16-alpine AS build
+# Stage 1: Build the React application
+FROM node:18 AS build
 
-# Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the container
-COPY package*.json ./
+# Copy the package.json and package-lock.json
+COPY package.json package-lock.json ./
 
-# Install project dependencies
+# Install dependencies using npm
 RUN npm install --legacy-peer-deps
 
-# Copy the rest of the React app's source code into the container
+# Copy the rest of the application code
 COPY . .
 
-# Build the React app for production
+# Build the React application
 RUN npm run build
 
-# Stage 2: Serve the app using Apache
-FROM httpd:latest
+# Stage 2: Serve the React application using Nginx
+FROM nginx:stable-alpine
 
-# Copy the built React app from the previous stage to Apache's web root
-COPY --from=build /app/build /usr/local/apache2/htdocs/
-
-# Copy the custom configuration (for React Router routing) into a separate file
-COPY apache-rewrite.conf /usr/local/apache2/conf/rewrite.conf
-
-# Include the new config in the main Apache config
-RUN echo "Include /usr/local/apache2/conf/rewrite.conf" >> /usr/local/apache2/conf/httpd.conf
+# Copy the build output from the previous stage
+COPY --from=build /app/build /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
 
-# Run Apache in the foreground
-CMD ["httpd-foreground"]
+# Start Nginx server
+CMD ["nginx", "-g", "daemon off;"]
