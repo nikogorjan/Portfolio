@@ -1,0 +1,21 @@
+version: '3'
+services:
+  nginx-portfolio:
+    image: nginx-portfolio:latest
+    container_name: nginx-portfolio
+    restart: unless-stopped
+    networks:
+      - coolify
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.nginx-portfolio.rule=Host(`fks0wccg0sgk08gcs0s4gk88.nikogorjan.com`)
+      - traefik.http.routers.nginx-portfolio.entrypoints=http
+      - traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https
+      - traefik.http.routers.nginx-portfolio-secure.rule=Host(`fks0wccg0sgk08gcs0s4gk88.nikogorjan.com`)
+      - traefik.http.routers.nginx-portfolio-secure.entrypoints=https
+      - traefik.http.routers.nginx-portfolio-secure.tls=true
+      - traefik.http.routers.nginx-portfolio-secure.tls.certresolver=letsencrypt
+      - traefik.http.services.nginx-portfolio.loadbalancer.server.port=80
+networks:
+  coolify:
+    external: true
