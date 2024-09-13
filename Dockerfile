@@ -1,5 +1,5 @@
-# Use the official Node.js image as the base image
-FROM node:16-alpine
+# Stage 1: Build the React app
+FROM node:16-alpine AS build
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -16,11 +16,20 @@ COPY . .
 # Build the React app for production
 RUN npm run build
 
-# Install a simple web server to serve the build files
-RUN npm install -g serve
+# Stage 2: Serve the app using Apache
+FROM httpd:latest
 
-# Set the command to run the app when the container starts
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Copy the built React app from the previous stage to Apache's web root
+COPY --from=build /app/build /usr/local/apache2/htdocs/
 
-# Expose the port that your React app will run on
-EXPOSE 3000
+# Copy the custom configuration (for React Router routing) into a separate file
+COPY apache-rewrite.conf /usr/local/apache2/conf/rewrite.conf
+
+# Include the new config in the main Apache config
+RUN echo "Include /usr/local/apache2/conf/rewrite.conf" >> /usr/local/apache2/conf/httpd.conf
+
+# Expose port 80
+EXPOSE 80
+
+# Run Apache in the foreground
+CMD ["httpd-foreground"]
