@@ -28,6 +28,9 @@ COPY apache-rewrite.conf /usr/local/apache2/conf/rewrite.conf
 # Include the new config in the main Apache config
 RUN echo "Include /usr/local/apache2/conf/rewrite.conf" >> /usr/local/apache2/conf/httpd.conf
 
+# Add the ServerName directive to avoid server name warnings
+RUN echo "ServerName nikogorjan.com" >> /usr/local/apache2/conf/httpd.conf
+
 # Expose port 80
 EXPOSE 80
 
